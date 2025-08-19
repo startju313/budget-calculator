@@ -18,3 +18,6 @@ git clone [https://github.com/startju313/budget-calculator.git](https://github.c
 cd budget-calculator
 npm install
 npm start
+
+<img width="1147" height="598" alt="image" src="https://github.com/user-attachments/assets/59c7bd00-1d06-45ab-bced-39b62582dae2" />
+
