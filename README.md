@@ -11,13 +11,14 @@ React로 만든 간단한 CRUD 예산 관리 앱입니다. 사용자는 지출 �
 - 💾 로컬 스토리지에 자동 저장
 - 💵 총 지출 금액 자동 계산
 
-## 📦 설치 및 실행
+<img width="1147" height="598" alt="image" src="https://github.com/user-attachments/assets/59c7bd00-1d06-45ab-bced-39b62582dae2" />
 
+
+## 📦 설치 및 실행
 ```bash
 git clone [https://github.com/startju313/budget-calculator.git](https://github.com/startju313/budget-calculator.git)
 cd budget-calculator
 npm install
 npm start
 
-<img width="1147" height="598" alt="image" src="https://github.com/user-attachments/assets/59c7bd00-1d06-45ab-bced-39b62582dae2" />
 
