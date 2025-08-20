@@ -5,7 +5,6 @@ import AlertMessage from "./components/AlertMessage";
 import "./App.css";
 
 function App() {
-  // ✅ localStorage에서 초기 데이터 불러오기
   const [expenses, setExpenses] = useState(() => {
     const saved = localStorage.getItem("expenses");
     return saved ? JSON.parse(saved) : [];
@@ -65,27 +64,29 @@ function App() {
   };
 
   return (
-    <div className="main-wrapper">
+  <div className="main-wrapper">
+    <div className="container">
+      {/* ✅ 알림을 container 안쪽으로 옮김 */}
       {alert.show && <AlertMessage type={alert.type} text={alert.text} />}
 
-      <div className="container">
-        <h2>예산 계산기</h2>
-        <div className="content-box">
-          <ExpenseForm addExpense={addExpense} editingItem={editingItem} />
-          <ExpenseList
-            expenses={expenses}
-            deleteExpense={deleteExpense}
-            editExpense={handleEditClick}
-            clearExpenses={clearExpenses}
-          />
-        </div>
-        <div className="total-section">
-          총 지출:{" "}
-          <span className="total-cost">{totalExpense.toLocaleString()}원</span>
-        </div>
+      <h2>예산 계산기</h2>
+      <div className="content-box">
+        <ExpenseForm addExpense={addExpense} editingItem={editingItem} />
+        <ExpenseList
+          expenses={expenses}
+          deleteExpense={deleteExpense}
+          editExpense={handleEditClick}
+          clearExpenses={clearExpenses}
+        />
+      </div>
+      <div className="total-section">
+        총 지출:{" "}
+        <span className="total-cost">{totalExpense.toLocaleString()}원</span>
       </div>
     </div>
+  </div>
   );
 }
 
 export default App;
+
