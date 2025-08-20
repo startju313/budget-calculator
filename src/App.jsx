@@ -14,13 +14,13 @@ function App() {
   const [editingItem, setEditingItem] = useState(null);
   const [totalExpense, setTotalExpense] = useState(0);
 
-  // ✅ 총 지출 계산
+  // 총 지출 계산
   useEffect(() => {
     const total = expenses.reduce((acc, curr) => acc + curr.amount, 0);
     setTotalExpense(total);
   }, [expenses]);
 
-  // ✅ localStorage에 저장
+  // localStorage에 저장
   useEffect(() => {
     localStorage.setItem("expenses", JSON.stringify(expenses));
   }, [expenses]);
@@ -66,7 +66,7 @@ function App() {
   return (
   <div className="main-wrapper">
     <div className="container">
-      {/* ✅ 알림을 container 안쪽으로 옮김 */}
+      {/*알림을 container 안쪽으로 옮김 */}
       {alert.show && <AlertMessage type={alert.type} text={alert.text} />}
 
       <h2>예산 계산기</h2>
